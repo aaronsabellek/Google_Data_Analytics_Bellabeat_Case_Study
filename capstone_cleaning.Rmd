@@ -90,9 +90,7 @@ daily_activity <- daily_activity %>%
 daily_activity$weekday <- factor(daily_activity$weekday, levels = c("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"))
 ```
 
-```{r echo=FALSE}
-glimpse(daily_activity)
-```
+![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/378af772-f3cb-4b1e-aa35-902d51930944)
 
 ### 3.2 Hourly calories
 ```{r echo = T, results = 'hide', message=FALSE}
