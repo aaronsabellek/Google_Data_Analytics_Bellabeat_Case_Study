@@ -12,7 +12,7 @@ The following analysis is the **final project of the "Data Analysis" course from
 Since visualizing the data in my approach is already an important part of the analysis itself, points 4. and 5. are merged.
 
 # 1. Ask
-The Bellabeat company sells three products designed to support women's health:: An app, a wellness tracker and a wellness smart watch. The key task is now to **analyze smart device usage data** to gain insights into three main questions:
+The Bellabeat company sells three products designed to support women's health: An app, a wellness tracker and a wellness smart watch. The key task is now to **analyze smart device usage data** to gain insights into three main questions:
 
 1. What are some trends in smart device usage?
 2. How could these trends apply to Bellabeat customers?
