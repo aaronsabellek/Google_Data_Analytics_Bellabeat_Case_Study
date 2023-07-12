@@ -1,12 +1,5 @@
 # Google_Data_Analytics_Bellabeat_Case_Study
 
----
-title: "capstone_documentation"
-author: "Aaron Sabellek"
-date: "2023-07-05"
-output: html_document
----
-
 The following analysis is the **final project of the "Data Analysis" course from Google** offered on the online platform Coursera. It is intended to apply, deepen and present what has been learned. The task is to analyze a specific data set for the company Bellabeat, a high-tech manufacturer of health-focused products for women, and its marketing purposes. For this purpose it follows the 6 steps taught by Google for analysis:
 
 1. Ask -> formulate the task
