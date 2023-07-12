@@ -479,5 +479,4 @@ Based on the analysis, the following six recommendations are made:
 * **Empower women** to **monitor their BMI and heart rate**
 * Focus on empowering users to **get enough sleep** with special programs, especially on Sundays
 * Create **motivational programs using special days and times** with generally high activity levels
-
-Finally, it is highly recommended to **collect more data** to gain a deeper understanding of smart device usage trends.
+* **Collect more data** to gain a deeper understanding of smart device usage trends.
