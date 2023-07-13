@@ -376,7 +376,7 @@ summary(sleep %>%
           select(-id))
 ```
 
-The new data frame is then visualized in a plot.
+The new data frame and the ratio of users sleeping more or less than 7 hours is then visualized.
 
 ```{r echo=FALSE, fig.height=3}
 sleep_hours <- ggplot(data=sleep)+
@@ -470,7 +470,7 @@ bmi_plot <- ggplot(bmi_participation, aes(x="", y=users, fill=status))+
 ```
 
 #### 4.3.3 Heart rate
-As it was seen in the cleaning process, there is only data for the heart rate of 14 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**. The ratio of participation in heart rate monitoring is visualized as a pie chart.
+As it was seen in the cleaning process, there is only data for the heart rate of 14 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**. The ratio of participation in heart rate monitoring and in BMI monitoring is visualized as a pie chart.
 
 ```{r echo=FALSE, fig.height=3}
 # create data frame deviding the users monitoring their heart rate from the others
