@@ -257,7 +257,7 @@ plot_sedentary <- ggplot(data=mean_activity)+
                                        colour="lightblue",
                                        linetype="solid"))
 
-# Arrange all four plots in a grid
+# arrange all four plots in a grid
 plot_grid(plot_very_active, plot_fairly_active, plot_lightly_active, plot_sedentary)
 ```
 
@@ -272,7 +272,7 @@ The plot showing the sedentary activity shows a clear divide between 14 users be
 The analysed users of FitBit fall into a wide range of activity levels, there is no specialization in very active or inactive levels. But **the majority are either low or normal in their activity level**. Also for a majority of users **spending most of the day sedentary** most is normal.
 
 #### 4.1.2 Steps per day
-The daily mean and median of each user's steps are calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data.
+The daily mean of each user's steps is calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data.
 ```{r}
 daily_steps <- daily_activity %>%
   group_by(id) %>%
@@ -291,7 +291,7 @@ daily_steps_plot <- ggplot(data=daily_steps)+
                                       colour="lightblue",
                                       linetype="solid"))
 
-# create data frame deviding the users reaching 8,000 steps per day from the other users
+# create new data frame to devide users reaching 8,000 per day from the others
 daily_steps_goal <- data.frame(
   ratio=c("more than 8,000 steps", "less than 8,000 steps"),
   users=c(sum(daily_steps$mean_steps >= 8000), sum(daily_steps$mean_steps < 8000))
@@ -300,10 +300,12 @@ daily_steps_goal <- data.frame(
 steps_goal_plot <- ggplot(daily_steps_goal, aes(x="", y=users, fill=ratio))+
   geom_bar(stat="identity", width=1, color="black")+
   coord_polar("y", start=0)+
-  #ggtitle("8,000 steps goal")+
   scale_fill_manual(values=c("lightblue", "aliceblue"))+
+  geom_text(aes(y = users/2 + c(0, cumsum(users)[-length(users)]),
+                label = percent(users/sum(n_distinct(daily_activity$id)))), size=3)+
   theme_void()
 
+# arrange both plots in a grid
 plot_grid(daily_steps_plot, steps_goal_plot)
 ```
 
@@ -355,6 +357,7 @@ usage_hours <- ggplot(data=daily_usage)+
                                        colour="lightblue",
                                        linetype="solid"))
 
+# arrange both plots in a grid
 plot_grid(usage_hours, usage_days)
 ```
 
@@ -391,10 +394,11 @@ sleep_bedtime <- ggplot(data=sleep)+
                                        colour="lightblue",
                                        linetype="solid"))
 
+# arrange both plots in a grid
 plot_grid(sleep_hours, sleep_bedtime)
 ```
 
-There are data on the sleep of 24 from the 33 users. 8, almost 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898, https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need).
+There are data on the sleep of 24 from the 33 users. 8, almost 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
 
 Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
@@ -425,6 +429,8 @@ bmi_plot <- ggplot(bmi_participation, aes(x="", y=users, fill=status))+
   geom_bar(stat="identity", width=1, color="black")+
   coord_polar("y", start=0)+
   ggtitle("BMI monitoring")+
+  geom_text(aes(y = users/2 + c(0, cumsum(users)[-length(users)]),
+                label = percent(users/sum(n_distinct(daily_activity$id)))), size=3)+
   scale_fill_manual(values=c("lightblue", "aliceblue"))+
   theme_void()
 ```
@@ -443,9 +449,12 @@ hr_plot <- ggplot(hr_participation, aes(x="", y=users, fill=status))+
   geom_bar(stat="identity", width=1, color="black")+
   coord_polar("y", start=0)+
   ggtitle("Heart rate monitoring")+
+  geom_text(aes(y = users/2 + c(0, cumsum(users)[-length(users)]),
+                label = percent(users/sum(n_distinct(daily_activity$id)))), size=3)+
   scale_fill_manual(values=c("lightblue", "aliceblue"))+
   theme_void()
 
+# arrange both plots in a grid
 plot_grid(bmi_plot, hr_plot)
 ```
 
