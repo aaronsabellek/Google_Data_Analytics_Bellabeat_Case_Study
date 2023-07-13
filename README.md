@@ -233,7 +233,7 @@ summary(daily_steps %>%
 
 The new data frame and the ratio of users reaching the goal of 8,000 steps daily is then visualized in a plot.
 
-![Screenshot 2023-07-13 111319](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/b0b08b89-c15d-48db-9a63-1b8cf01d5d0f)
+![Screenshot 2023-07-13 140938](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/9142ea85-f9e8-422a-a67f-c1013fc0616b)
 
 14 reach the goal of 8,000 steps per day in mean. This means that more than half of the 33 users do not reach this goal, and also 6 users do not even reach half of 8,000 steps per day in mean. So while many users are already living healthy lives in terms of their daily steps, **a large percentage still need to improve in this regard**.
 
@@ -292,7 +292,7 @@ The new data frame is then visualized in a plot.
 
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/e4318ca3-54af-4c31-9757-9c36e6eda16a)
 
-![Screenshot 2023-07-13 123732](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/cf4adf8b-ecb1-4d5d-b55e-ef39c4f37080)
+![Screenshot 2023-07-13 140754](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/d630dc87-c035-401c-bdd0-978aab6c4859)
 
 There is data on the sleep of 24 of the 33 users, that is almost 3/4. 13 of that 24 users, more than half of them, sleep less than 7 hours per day. 8 users, 1/3 of them, sleep even less than 6 hours per day. 
 
