@@ -432,7 +432,7 @@ sleep_pie_2 <- ggplot(sleep_ratio_2, aes(x="", y=users, fill=status))+
 plot_grid(sleep_pie_1, sleep_pie_2)
 ```
 
-There is data on the sleep of 24 from the 33 users. 8, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
+There is data on the sleep of 24 of the 33 users, that is almost 3/4. 8 of that 24 users, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
 Then the time of daily sleep is grouped by weekday and visualized in a plot.
 ```{r echo=FALSE}
