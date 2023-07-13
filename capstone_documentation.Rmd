@@ -257,6 +257,7 @@ plot_sedentary <- ggplot(data=mean_activity)+
                                        colour="lightblue",
                                        linetype="solid"))
 
+# Arrange all four plots in a grid
 plot_grid(plot_very_active, plot_fairly_active, plot_lightly_active, plot_sedentary)
 ```
 
