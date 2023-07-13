@@ -220,7 +220,7 @@ The plot showing the sedentary activity shows a clear divide between 14 users be
 The analysed users of FitBit fall into a wide range of activity levels, there is no specialization in very active or inactive levels. But **the majority are either low or normal in their activity level**. Also for a majority of users **spending most of the day sedentary** most is normal.
 
 #### 4.1.2 Steps per day
-The daily mean and median of each user's steps are calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data.
+The daily mean of each user's steps is calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data.
 ```{r}
 daily_steps <- daily_activity %>%
   group_by(id) %>%
@@ -291,7 +291,7 @@ The new data frame is then visualized in a plot.
 
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/e4318ca3-54af-4c31-9757-9c36e6eda16a)
 
-There are data on the sleep of 24 users. 8, almost 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
+There is data on the sleep of 24 users. 8, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
 
 Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
