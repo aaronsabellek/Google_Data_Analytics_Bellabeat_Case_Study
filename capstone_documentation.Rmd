@@ -38,7 +38,7 @@ The dataset contains **five main limitations**:
 4. It is a third-party source not generated under transparent circumstances.
 5. In many cases the meaning of the data is not clear, for example what units are used to measure distances, making the data sets very open for interpretation.
 
-This limitations make the dataset all in all an unreliable source for making data driven decisions, but can be used as **an heuristic starting point**.
+This limitations make the data set all in all an unreliable source for making data driven decisions, but can be used as **an heuristic starting point**.
 
 # 3. Process
 
