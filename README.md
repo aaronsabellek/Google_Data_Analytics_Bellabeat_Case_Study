@@ -1,4 +1,4 @@
-# Google "Data Analytics" Case Study
+e# Google "Data Analytics" Case Study
 ### How Can a Wellness Technology Company Play It Smart?
 
 The following analysis is the **final project of the "Data Analysis" course from Google** offered on the online platform Coursera. It is intended to apply, deepen and present what has been learned. The task is to analyze a specific data set for the company Bellabeat, a high-tech manufacturer of health-focused products for women, and its marketing purposes. For this purpose it follows the 6 steps taught by Google for analysis:
@@ -337,7 +337,7 @@ On **Tuesday, Wednesday and Saturday** the activity level is particularly high, 
 # 6. Act
 Based on the analysis, the following six recommendations are made:
 
-* **Adapt** the app and devices most **to the normal person** who does no to about 2 hours of exercise per week
+* **Adapt** the app and devices most **to the average person** who does no to about 2 hours of exercise per week
 * **Fight** especially **sitting too long and promote the 8000 steps per day** challenge
 * Focus a lot on the **long-term motivation of users**
 * Empower women to **monitor their BMI and heart rate**
