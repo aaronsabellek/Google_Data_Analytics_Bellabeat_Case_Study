@@ -293,7 +293,9 @@ The new data frame is then visualized in a plot.
 
 ![Screenshot 2023-07-13 123732](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/cf4adf8b-ecb1-4d5d-b55e-ef39c4f37080)
 
-There is data on the sleep of 24 of the 33 users, that is almost 3/4. 8 of that 24 users, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
+There is data on the sleep of 24 of the 33 users, that is almost 3/4. 13 of that 24 users, more than half of them, sleep less than 7 hours per day. 8 users, 1/3 of them, sleep even less than 6 hours per day. 
+
+Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
 Then the time of daily sleep is grouped by weekday and visualized in a plot.
 
