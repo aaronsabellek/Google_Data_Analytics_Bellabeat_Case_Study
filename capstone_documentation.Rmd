@@ -388,7 +388,7 @@ sleep_bedtime <- ggplot(data=sleep)+
 plot_grid(sleep_hours, sleep_bedtime)
 ```
 
-There are data on the sleep of 24 users. 8, almost 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898, https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need).
+There are data on the sleep of 24 from the 33 users. 8, almost 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898, https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need).
 
 Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
@@ -406,10 +406,40 @@ ggplot(data=sleep_day, aes(x=weekday, y=total_minutes_asleep/60))+
 Problems with falling asleep do not seem to be a problem of the majority, however **too little sleep**, especially from **Sunday to Monday**.
 
 #### 4.3.2 BMI
-As it was seen in the cleaning process, there is only data for the BMI of 8 users, making their data insignificant. What can be said for sure, however, is that **most users in this data set (almost 3/4) do not use their device for weight control**.
+As it was seen in the cleaning process, there is only data for the BMI of 8 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (almost 3/4) do not use their device for weight control**. The ratio of participation in BMI monitoring is visualized below.
+
+```{r echo=FALSE}
+bmi_participation <- data.frame(
+  status=c("participating", "not participating"),
+  users=c(sum(n_distinct(weight_log_info$id)), sum(n_distinct(daily_activity$id))-sum(n_distinct(weight_log_info$id)))
+)
+
+bmi_plot <- ggplot(bmi_participation, aes(x="", y=users, fill=status))+
+  geom_bar(stat="identity", width=1, color="black")+
+  coord_polar("y", start=0)+
+  ggtitle("BMI monitoring")+
+  scale_fill_manual(values=c("lightblue", "aliceblue"))+
+  theme_void()
+```
 
 #### 4.3.3 Heart rate
-As it was seen in the cleaning process, there is only data for the heart rate of 14 users, making this data insignificant. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**.
+As it was seen in the cleaning process, there is only data for the heart rate of 14 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**. The ratio of participation in heart rate monitoring is visualized as a pie chart.
+
+```{r echo=FALSE, fig.height=3}
+hr_participation <- data.frame(
+  status=c("participating", "not participating"),
+  users=c(sum(n_distinct(heartrate_seconds$id)), sum(n_distinct(daily_activity$id))-sum(n_distinct(heartrate_seconds$id)))
+)
+
+hr_plot <- ggplot(hr_participation, aes(x="", y=users, fill=status))+
+  geom_bar(stat="identity", width=1, color="black")+
+  coord_polar("y", start=0)+
+  ggtitle("Heart rate monitoring")+
+  scale_fill_manual(values=c("lightblue", "aliceblue"))+
+  theme_void()
+
+plot_grid(bmi_plot, hr_plot)
+```
 
 ### 4.4 Activity peaks per weekday
 Analyzing activity peaks per weekday can be very important to motivate people at the right time. Two types of data from the hourly data set can be used for that purpose:  calories burned and the steps.
