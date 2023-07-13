@@ -229,11 +229,11 @@ summary(daily_steps %>%
 ```
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/f553fb07-b605-4c30-b644-f3dab891da5c)
 
-The new data frame is then visualized in a plot.
+The new data frame and the ratio of users reaching the goal of 8,000 steps daily is then visualized in a plot.
 
-![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/07258485-46a5-41b4-ac9f-94afd54734a7)
+![Screenshot 2023-07-13 104522](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/a33c8cf5-042b-4e58-bda1-e24a169661d8)
 
-14 users reach the goal of 8000 steps per day in mean (15 in median). This means that more than half of the 33 users do not reach this goal, and also 6 users do not even reach half of 8,000 steps per day in mean (5 in median). So while many users are already living healthy lives in terms of their daily steps, **a large percentage still need to improve in this regard**.
+14 reach the goal of 8,000 steps per day in mean. This means that more than half of the 33 users do not reach this goal, and also 6 users do not even reach half of 8,000 steps per day in mean. So while many users are already living healthy lives in terms of their daily steps, **a large percentage still need to improve in this regard**.
 
 ### 4.2 Usage time of fitness trackers
 Analyzing the usage time of fitness devices is important to gain insights about the role they play in users' daily lives. Fitness tracker usage can be analyzed separately with our data sets in hours per day and in days for the month in which the data was collected.
