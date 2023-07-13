@@ -366,7 +366,7 @@ plot_grid(usage_hours, usage_days)
 Analyzing the general health of users can provide insight into specific problems that many of them may have. Bellabeat can then respond to these problems with appropriate device functions or programs. Users' general health can be analyzed from the given data by calculating four different things: Their average BMI, their sleep per day, the ratio of their sleep time to their time spent in bed, and their average heart rate.
 
 #### 4.3.1 Sleep
-The mean hours of sleep per day, of time staying in bed, and the ratio between the two values is calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data.
+The mean hours of sleep per day, of time staying in bed, and the ratio between the two values is calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
 
 ```{r}
 sleep <- sleep_day %>%
@@ -395,13 +395,44 @@ sleep_bedtime <- ggplot(data=sleep)+
                                        colour="lightblue",
                                        linetype="solid"))
 
-# arrange both plots in a grid
+# arrange both plots together
 plot_grid(sleep_hours, sleep_bedtime)
+
+# create data frame to divide users sleeping more than 7 hours from users sleeping less than 7 hours and users with no information for sleep at all
+sleep_ratio_1 <- data.frame(
+  status=c("no information", "more than 7 hours", "less than 7 hours"),
+  users=c(sum(n_distinct(daily_steps$id))-sum(n_distinct(sleep$id)), sum(sleep$mean_sleep_hours >= 7, na.rm=T), sum(sleep$mean_sleep_hours < 7, na.rm=T))
+)
+
+# create data frame to divide users sleeping more than 7 hours from users sleeping less than 7 hours
+sleep_ratio_2 <- data.frame(
+  status=c("more than 7 hours", "less than 7 hours"),
+  users=c(sum(sleep$mean_sleep_hours >= 7, na.rm=T), sum(sleep$mean_sleep_hours < 7, na.rm=T))
+)
+
+sleep_pie_1 <- ggplot(sleep_ratio_1, aes(x="", y=users, fill=status))+
+  geom_bar(stat="identity", width=1, color="black")+
+  coord_polar("y", start=0)+
+  ggtitle("Every user")+
+  geom_text(aes(y = users/2 + c(0, cumsum(users)[-length(users)]),
+                label = percent(users/sum(n_distinct(daily_activity$id)))), size=3)+
+  scale_fill_manual(values=c("white", "lightblue", "aliceblue"))+
+  theme_void()
+
+sleep_pie_2 <- ggplot(sleep_ratio_2, aes(x="", y=users, fill=status))+
+  geom_bar(stat="identity", width=1, color="black")+
+  coord_polar("y", start=0)+
+  ggtitle("Only users with sleep tracking")+
+  geom_text(aes(y = users/2 + c(0, cumsum(users)[-length(users)]),
+                label = percent(users/sum(n_distinct(sleep$id)))), size=3)+
+  scale_fill_manual(values=c("lightblue", "aliceblue"))+
+  theme_void()
+
+# arrange both plots together
+plot_grid(sleep_pie_1, sleep_pie_2)
 ```
 
-There is data on the sleep of 24 from the 33 users. 8, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
-
-Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
+There is data on the sleep of 24 from the 33 users. 8, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
 Then the time of daily sleep is grouped by weekday and visualized in a plot.
 ```{r echo=FALSE}
