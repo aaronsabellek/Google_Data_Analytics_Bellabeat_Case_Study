@@ -272,10 +272,10 @@ The resulting plot from this data frame can be seen below. The device is used by
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/706e9f30-1feb-43b2-87f2-40d673b69a53)
 
 ### 4.3 Health of users
-Analyzing the general health of users can provide insight into specific problems that many of them may have. Bellabeat can then respond to these problems with appropriate device functions or programs. Users' general health can be analyzed from the given data by calculating four different things: Their average BMI, their sleep per day, the ratio of their sleep time to their time spent in bed, and their average heart rate.
+Analyzing the general health of users can provide insight into specific problems that many of them may have. Bellabeat can then respond to these problems with appropriate device functions or programs. Users' general health can be analyzed from the given data by calculating four different things: Their sleep per day, the ratio of their sleep time to their time spent in bed, their average BMI, and their average heart rate.
 
 #### 4.3.1 Sleep
-The mean hours of sleep per day, of time staying in bed, and the ratio between the two values is calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data.
+The mean hours of sleep per day, of time staying in bed, and the ratio between the two values is calculated and stored in a new data frame. A statistical summary is then created for an initial exploration of the data. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
 
 ```{r}
 sleep <- sleep_day %>%
@@ -291,9 +291,9 @@ The new data frame is then visualized in a plot.
 
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/e4318ca3-54af-4c31-9757-9c36e6eda16a)
 
-There is data on the sleep of 24 users. 8, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
+![Screenshot 2023-07-13 123732](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/cf4adf8b-ecb1-4d5d-b55e-ef39c4f37080)
 
-Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
+There is data on the sleep of 24 users. 8, 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
 Then the time of daily sleep is grouped by weekday and visualized in a plot.
 
