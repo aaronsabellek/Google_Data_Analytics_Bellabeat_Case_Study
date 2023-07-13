@@ -46,6 +46,7 @@ library("janitor")
 library("tidyverse")
 library("dplyr")
 library("cowplot")
+library("formattable")
 ```
 
 The **cleaning process** consists of the following steps **for each data set**:
