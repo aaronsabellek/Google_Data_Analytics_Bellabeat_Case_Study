@@ -503,7 +503,7 @@ On **Tuesday, Wednesday and Saturday** the activity level is particularly high, 
 # 6. Act
 Based on the analysis, the following six recommendations are made:
 
-* **Adapt** the app and devices most **to the normal person** who does no to about 2 hours of exercise per week
+* **Adapt** the app and devices most **to the average person** who does no to about 2 hours of exercise per week
 * **Fight** especially **sitting too long and promote the 8000 steps per day** challenge
 * Focus a lot on the **long-term motivation of users**
 * Empower women to **monitor their BMI and heart rate**
