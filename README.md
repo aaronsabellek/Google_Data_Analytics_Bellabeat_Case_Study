@@ -224,11 +224,12 @@ The daily mean of each user's steps is calculated and stored in a new data frame
 ```{r}
 daily_steps <- daily_activity %>%
   group_by(id) %>%
-  summarise(mean_steps=mean(total_steps), median_steps=median(total_steps))
+  summarise(mean_steps=mean(total_steps))
 summary(daily_steps %>% 
-          select(-id))
+          select(mean_steps))
 ```
-![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/f553fb07-b605-4c30-b644-f3dab891da5c)
+
+![Screenshot 2023-07-13 135540](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/73af1bdd-2d85-4c9c-968f-d9da9d60c254)
 
 The new data frame and the ratio of users reaching the goal of 8,000 steps daily is then visualized in a plot.
 
