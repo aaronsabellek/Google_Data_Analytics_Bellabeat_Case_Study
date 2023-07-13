@@ -231,7 +231,7 @@ summary(daily_steps %>%
 
 The new data frame and the ratio of users reaching the goal of 8,000 steps daily is then visualized in a plot.
 
-![Screenshot 2023-07-13 104522](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/a33c8cf5-042b-4e58-bda1-e24a169661d8)
+![Screenshot 2023-07-13 111319](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/b0b08b89-c15d-48db-9a63-1b8cf01d5d0f)
 
 14 reach the goal of 8,000 steps per day in mean. This means that more than half of the 33 users do not reach this goal, and also 6 users do not even reach half of 8,000 steps per day in mean. So while many users are already living healthy lives in terms of their daily steps, **a large percentage still need to improve in this regard**.
 
@@ -306,7 +306,7 @@ As it was seen in the cleaning process, there is only data for the BMI of 8 from
 #### 4.3.3 Heart rate
 As it was seen in the cleaning process, there is only data for the heart rate of 14 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**. The ratio of participation in heart rate monitoring is visualized as a pie chart.
 
-![Screenshot 2023-07-13 094651](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/b87bdbf7-15f4-43b9-9f16-a9ee5144ad72)
+![Screenshot 2023-07-13 111334](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/fdd6cfa8-578f-4f69-a13f-eecb1439b74c)
 
 ### 4.4 Activity peaks per weekday
 Analyzing activity peaks per weekday can be very important to motivate people at the right time. Two types of data from the hourly data set can be used for that purpose:  calories burned and the steps.
