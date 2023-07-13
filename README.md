@@ -290,7 +290,7 @@ The new data frame is then visualized in a plot.
 
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/e4318ca3-54af-4c31-9757-9c36e6eda16a)
 
-There are data on the sleep of 24 users. 8, almost 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898, https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need).
+There are data on the sleep of 24 users. 8, almost 1/3 of them, sleep less than 6 hours per day. 13, more than half of them, sleep less than 7 hours per day. Sleep of at least seven hours per day is recommended for a healthy lifestyle (https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/how-many-hours-of-sleep-are-enough/faq-20057898).
 
 Only two individuals appear to have very severe sleep disturbances (less than 70% of sleep time in bed), 4 individuals sleep less than 90% of their bedtime in bed.
 
