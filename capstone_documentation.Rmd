@@ -310,7 +310,7 @@ steps_goal_plot <- ggplot(daily_steps_goal, aes(x="", y=users, fill=ratio))+
 plot_grid(daily_steps_plot, steps_goal_plot)
 ```
 
-14 users reach the goal of 8000 steps per day in mean (15 in median). This means that more than half of the 33 users do not reach this goal, and also 6 users do not even reach half of 8,000 steps per day in mean (5 in median). So while many users are already living healthy lives in terms of their daily steps, **a large percentage still need to improve in this regard**.
+14 users reach the goal of 8000 steps per day in mean. This means that more than half of the 33 users do not reach this goal, and also 6 users do not even reach half of 8,000 steps per day in mean. So while many users are already living healthy lives in terms of their daily steps, **a large percentage still need to improve in this regard**.
 
 ### 4.2 Usage time of fitness trackers
 Analyzing the usage time of fitness devices is important to gain insights about the role they play in users' daily lives. Fitness tracker usage can be analyzed separately with our data sets in hours per day and in days for the month in which the data was collected.
