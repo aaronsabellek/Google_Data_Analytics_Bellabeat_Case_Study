@@ -288,7 +288,7 @@ summary(sleep %>%
 
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/29e5ff3a-a92c-43e7-af6f-01bb8946e7b2)
 
-The new data frame is then visualized in a plot.
+The new data frame and the ratio of users sleeping more or less than 7 hours is then visualized.
 
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/e4318ca3-54af-4c31-9757-9c36e6eda16a)
 
@@ -308,7 +308,7 @@ Problems with falling asleep do not seem to be a problem of the majority, howeve
 As it was seen in the cleaning process, there is only data for the BMI of 8 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (almost 3/4) do not use their device for weight control**. The ratio of participation in BMI monitoring is visualized below.
 
 #### 4.3.3 Heart rate
-As it was seen in the cleaning process, there is only data for the heart rate of 14 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**. The ratio of participation in heart rate monitoring is visualized as a pie chart.
+As it was seen in the cleaning process, there is only data for the heart rate of 14 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**. The ratio of participation in heart rate monitoring and in BMI monitoring is visualized as a pie chart.
 
 ![Screenshot 2023-07-13 111334](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/fdd6cfa8-578f-4f69-a13f-eecb1439b74c)
 
