@@ -281,9 +281,9 @@ summary(daily_steps %>%
           select(-id))
 ```
 
-The new data frame is then visualized in a plot.
+The new data frame and the ratio of users reaching the goal of 8,000 steps daily is then visualized two plots.
 ```{r echo=FALSE, fig.height=3}
-steps_mean <- ggplot(data=daily_steps)+
+daily_steps_plot <- ggplot(data=daily_steps)+
   geom_point(mapping=aes(x=id, y=mean_steps))+
   xlab("user ID")+
   ylab("Mean steps per day")+
@@ -291,15 +291,20 @@ steps_mean <- ggplot(data=daily_steps)+
                                       colour="lightblue",
                                       linetype="solid"))
 
-steps_median <- ggplot(data=daily_steps)+
-  geom_point(mapping=aes(x=id, y=median_steps))+
-  xlab("user ID")+
-  ylab("Mean steps per day")+
-  theme(panel.background=element_rect(fill="lightblue",
-                                      colour="lightblue",
-                                      linetype="solid"))
+# create data frame deviding the users reaching 8,000 steps per day from the other users
+daily_steps_goal <- data.frame(
+  ratio=c("more than 8,000 steps", "less than 8,000 steps"),
+  users=c(sum(daily_steps$mean_steps >= 8000), sum(daily_steps$mean_steps < 8000))
+)
 
-plot_grid(steps_mean, steps_median)
+steps_goal_plot <- ggplot(daily_steps_goal, aes(x="", y=users, fill=ratio))+
+  geom_bar(stat="identity", width=1, color="black")+
+  coord_polar("y", start=0)+
+  #ggtitle("8,000 steps goal")+
+  scale_fill_manual(values=c("lightblue", "aliceblue"))+
+  theme_void()
+
+plot_grid(daily_steps_plot, steps_goal_plot)
 ```
 
 14 users reach the goal of 8000 steps per day in mean (15 in median). This means that more than half of the 33 users do not reach this goal, and also 6 users do not even reach half of 8,000 steps per day in mean (5 in median). So while many users are already living healthy lives in terms of their daily steps, **a large percentage still need to improve in this regard**.
@@ -410,6 +415,7 @@ Problems with falling asleep do not seem to be a problem of the majority, howeve
 As it was seen in the cleaning process, there is only data for the BMI of 8 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (almost 3/4) do not use their device for weight control**. The ratio of participation in BMI monitoring is visualized below.
 
 ```{r echo=FALSE}
+# create data frame deviding the users monitoring their bmi from the others
 bmi_participation <- data.frame(
   status=c("participating", "not participating"),
   users=c(sum(n_distinct(weight_log_info$id)), sum(n_distinct(daily_activity$id))-sum(n_distinct(weight_log_info$id)))
@@ -427,6 +433,7 @@ bmi_plot <- ggplot(bmi_participation, aes(x="", y=users, fill=status))+
 As it was seen in the cleaning process, there is only data for the heart rate of 14 from the 33 users, making this data much more insignificant compared to the entire data set. What can be said for sure, however, is that **most users in this data set (more than 1/2) do not use their device to monitor heart rate**. The ratio of participation in heart rate monitoring is visualized as a pie chart.
 
 ```{r echo=FALSE, fig.height=3}
+# create data frame deviding the users monitoring their heart rate from the others
 hr_participation <- data.frame(
   status=c("participating", "not participating"),
   users=c(sum(n_distinct(heartrate_seconds$id)), sum(n_distinct(daily_activity$id))-sum(n_distinct(heartrate_seconds$id)))
@@ -448,6 +455,7 @@ Analyzing activity peaks per weekday can be very important to motivate people at
 First the calories burned per hour are visualized in a plot for each weekday.
 
 ```{r echo=FALSE, fig.height=7}
+# create a function to show only every second label tick on the x-axis
 everysecond <- function(x){
   x <- sort(unique(x))
   x[seq(2, length(x), 2)] <- ""
