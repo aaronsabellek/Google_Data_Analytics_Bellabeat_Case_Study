@@ -519,7 +519,7 @@ ggplot(data=hourly_data, aes(x=hour, y=calories))+
   facet_wrap(~weekday, ncol=2)
 ```
 
-Days seem to be very actively used when they record have more than 17500 steps per hour.
+Days seem to be very actively used when they record have more than 17500 calories per hour.
 
 The same visualization is then done for the steps per hour for each weekday.
 
