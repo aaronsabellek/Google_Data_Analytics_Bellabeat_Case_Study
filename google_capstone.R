@@ -1,0 +1,17 @@
+library("here")
+library("skimr")
+library("janitor")
+library("tidyverse")
+library("dplyr")
+library("cowplot")
+library("formattable")
+
+daily_activity <- read_csv("../Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv")
+skim_without_charts(daily_activity)
+daily_activity <- clean_names(daily_activity)
+daily_activity$activity_date <- as.Date(daily_activity$activity_date, format="%m/%d/%Y")
+sum(duplicated(daily_activity))
+n_distinct(daily_activity$id)
+daily_activity <- daily_activity %>%
+  mutate(weekday=weekdays(activity_date))
+daily_activity$weekday <- factor(daily_activity$weekday, levels = c("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"))
