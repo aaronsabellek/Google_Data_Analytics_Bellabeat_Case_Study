@@ -319,7 +319,7 @@ First the calories burned per hour are visualized in a plot for each weekday.
 
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/82c5dea5-ef85-489a-a6ac-81dc1e4414f9)
 
-Days seem to be very actively used when they record have more than 17500 steps per hour.
+Days seem to be very actively used when they record have more than 17500 calories per hour.
 
 The same visualization is then done for the steps per hour for each weekday.
 ![image](https://github.com/aaronsabellek/Google_Data_Analytics_Bellabeat_Case_Study/assets/77847547/54bda3d7-86d3-489a-950e-e156c592d9a7)
