@@ -416,7 +416,7 @@ sleep_pie_1 <- ggplot(sleep_ratio_1, aes(x="", y=users, fill=status))+
   ggtitle("Every user")+
   geom_text(aes(y = users/2 + c(0, cumsum(users)[-length(users)]),
                 label = percent(users/sum(n_distinct(daily_activity$id)))), size=3)+
-  scale_fill_manual(values=c("white", "lightblue", "aliceblue"))+
+  scale_fill_manual(values=c("lightblue", "aliceblue", "steelblue"))+
   theme_void()
 
 sleep_pie_2 <- ggplot(sleep_ratio_2, aes(x="", y=users, fill=status))+
